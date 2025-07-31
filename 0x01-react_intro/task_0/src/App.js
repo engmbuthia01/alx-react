@@ -1,11 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
+import alxlogo from './alx-logo.jpg';
 
 function App() {
   return (
     <>
       <div className='App-header'>
-        <img src="alx-logo.jpg"></img>
+        <img src={alxlogo} alt='ALX Logo' />
         <h1>School dashboard</h1>
       </div >
 
