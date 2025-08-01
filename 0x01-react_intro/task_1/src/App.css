@@ -1,0 +1,31 @@
+.App-header {
+  display: flex;
+  align-items: center;
+  border-bottom: 3px solid red;
+  padding: 20px;
+}
+
+.App-header img {
+  height: 200px;
+  margin-right: 20px;
+}
+
+.App-header h1 {
+  color: red;
+}
+
+.App-body {
+  height: 40vh;
+  border-bottom: 3px solid red;
+}
+
+.App-body p {
+  padding: 40px;
+  margin-left: 20px;
+}
+
+.App-footer p {
+  display: flex;
+  justify-content: center;
+  font-style: italic;
+}
