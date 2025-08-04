@@ -3,7 +3,7 @@ export function getFullYear() {
 }
 
 export default getFooterCopy(isIndex) {
-    if (isindex) {
+    if (isIndex) {
         return "ALX";
     } else {
         return "ALX main dashboard";
