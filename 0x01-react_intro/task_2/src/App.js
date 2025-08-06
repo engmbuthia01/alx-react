@@ -20,7 +20,7 @@ function App() {
       </div>
 
       <div className='App-footer'>
-        <p>Copyright 2020 - ALX</p>
+        <p>Copyright {getFullYear()} - {getFooterCopy()}</p>
       </div>
     </>
 
