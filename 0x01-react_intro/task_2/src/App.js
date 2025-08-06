@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import alxlogo from './alx-logo.jpg';
 import { getFullYear, getFooterCopy } from './utils';

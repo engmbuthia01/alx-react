@@ -3,7 +3,7 @@ import './Notifications.css';
 import closeIcon from './close-icon.png';
 import { getLatestNotification } from './utils';
 
-export default function Notifications() {
+function Notifications() {
     return (
         <div className='Notifications'>
             <button
@@ -14,7 +14,7 @@ export default function Notifications() {
                     right: '2px',
                     background: 'none',
                     border: 'none',
-                    fontSize: '10px',
+                    fontSize: '15px',
                     cursor: 'pointer'
                 }}
                 aria-label="close"
@@ -35,3 +35,5 @@ export default function Notifications() {
         </div>
     );
 }
+
+export default Notifications;

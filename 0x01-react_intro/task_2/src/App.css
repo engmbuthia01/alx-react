@@ -3,6 +3,7 @@
   align-items: center;
   border-bottom: 3px solid red;
   padding: 20px;
+  margin-top: 140px;
 }
 
 .App-header img {
@@ -17,6 +18,7 @@
 .App-body {
   height: 40vh;
   border-bottom: 3px solid red;
+  padding: 20px;
 }
 
 .App-body p {
