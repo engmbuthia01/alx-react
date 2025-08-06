@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   border-bottom: 3px solid red;
-  padding: 20px;
+  padding: 40px;
   margin-top: 140px;
 }
 
@@ -22,7 +22,6 @@
 }
 
 .App-body p {
-  padding: 40px;
   margin-left: 20px;
 }
 
