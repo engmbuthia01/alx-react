@@ -1,0 +1,47 @@
+{
+  "name": "dashboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode development --config config/webpack.config.js",
+    "build": "webpack",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.28.0",
+    "@babel/preset-env": "^7.28.0",
+    "@babel/preset-react": "^7.27.1",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.8.0",
+    "babel-jest": "^30.0.5",
+    "babel-loader": "^10.0.0",
+    "css-loader": "^7.1.2",
+    "enzyme": "^3.11.0",
+    "enzyme-to-json": "^3.6.2",
+    "file-loader": "^6.2.0",
+    "image-webpack-loader": "^8.1.0",
+    "jest": "^30.0.5",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.101.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2"
+  },
+  "dependencies": {
+    "20": "^3.1.9"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "<rootDir>/config/setupTests.js"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "transform": {
+      "^.+\\.(js|jsx)$": "babel-jest"
+    }
+  }
+}
