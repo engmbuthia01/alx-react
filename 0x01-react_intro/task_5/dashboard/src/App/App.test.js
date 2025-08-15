@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import App from './App'
+import App from './App/App'
 
 describe('Appcomponent tests', () => {
     it('renders without crashing', () => {
