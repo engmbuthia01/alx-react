@@ -1,4 +1,4 @@
-import { getFullYear, getFooterCopy, getLatestNotification } from './utils.js';
+import { getFullYear, getFooterCopy, getLatestNotification } from './utils';
 
 test('getFullYear returns the current year', () => {
     const currentYear = new Date().getFullYear();
