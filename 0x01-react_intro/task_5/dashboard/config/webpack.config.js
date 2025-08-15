@@ -2,37 +2,37 @@ const path = require('path');
 
 module.exports = {
     mode: 'development',
-    entry: path.resolve(__dirname, '../src/index.js'), // correct absolute path to src
+    entry: './src/index.js', // Entry point
     output: {
-        path: path.resolve(__dirname, '../dist'), // output in dist folder at project root
+        path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
     },
     devServer: {
-        static: path.resolve(__dirname, '../dist'),
+        static: path.resolve(__dirname, 'dist'),
         hot: true,
         port: 3000
     },
     module: {
         rules: [
             {
-                test: /\.(js|jsx)$/,  // handle both .js and .jsx files
+                test: /\.(js|jsx)$/,  // Support both .js and .jsx
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader'
                 }
             },
             {
-                test: /\.css$/,       // handle CSS
+                test: /\.css$/,       // CSS handling
                 use: ['style-loader', 'css-loader']
             },
             {
-                test: /\.(png|jpg|gif|svg)$/, // handle images
+                test: /\.(png|jpg|gif|svg)$/, // Images
                 type: 'asset/resource'
             }
         ]
     },
     resolve: {
-        extensions: ['.js', '.jsx'] // so imports can omit file extensions
+        extensions: ['.js', '.jsx']
     },
     devtool: 'inline-source-map'
 };
