@@ -1,4 +1,4 @@
-import './App/App.css';
+import './App.css';
 import alxlogo from './assets/alx-logo.jpg';
 import { getFullYear, getFooterCopy } from './utils/utils';
 
