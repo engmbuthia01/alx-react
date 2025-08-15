@@ -1,6 +1,6 @@
 import './App.css';
-import alxlogo from './assets/alx-logo.jpg';
-import { getFullYear, getFooterCopy } from './utils/utils';
+import alxlogo from '../assets/alx-logo.jpg';
+import { getFullYear, getFooterCopy } from '../utils/utils';
 
 function App() {
   return (
