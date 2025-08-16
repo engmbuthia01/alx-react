@@ -2,7 +2,7 @@ import React from 'react';
 import Notifications from './Notifications';
 import { shallow } from 'enzyme';
 
-describe('Notifications compnent tests', () => {
+describe('Notifications component tests', () => {
     it('renders Notifications without failing', () => {
         const component = shallow(<Notifications />);
         expect(component).toBeDefined();
