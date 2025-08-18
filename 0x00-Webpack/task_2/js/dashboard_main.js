@@ -1,8 +1,6 @@
 import $ from 'jquery';
 import _ from 'lodash';
-import '../css/main.css'
-
-$('body').prepend('<div id="logo"></div>');
+import '../css/main.css';
 
 $('body').append('<p>ALX Dashboard</p>');
 $('body').append('<p>Dashboard data for the students</p>');

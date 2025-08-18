@@ -12,7 +12,10 @@ module.exports = {
         rules: [
             {
                 test: /\.css$/i,
-                use: ['css-loader', 'style-loader'],
+                use: [
+                    'style-loader',
+                    'css-loader'
+                ],
             },
             {
                 test: /\.(png|jpe?g|gif)$/i,
@@ -40,7 +43,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './public/index.html', // use our custom HTML template
+            template: './public/index.html',
             filename: 'index.html',
             inject: 'body'
         })
@@ -48,4 +51,4 @@ module.exports = {
     performance: {
         hints: false // disable asset size warnings
     }
-};
+}
