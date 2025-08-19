@@ -10,7 +10,7 @@ module.exports = {
         footer: './modules/footer/footer.js',
     }
     output: {
-        filename: 'bundle.js',
+        filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'public'),
     },
     module: {
@@ -47,11 +47,11 @@ module.exports = {
         ]
     },
     plugins: [
+        new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-            template: './public/index.html',
-            filename: 'index.html',
-            inject: 'body'
-        })
+            template: './index.html', // create a simple index.html with <div id="root"></div>
+            inject: 'body',
+        }),
     ],
     performance: {
         hints: false // disable asset size warnings
