@@ -1,6 +1,6 @@
 import './App.css';
-import alxlogo from './alx-logo.jpg';
-import { getFullYear, getFooterCopy } from './utils';
+import alxlogo from '../assets/holberton-logo.jpg';
+import { getFullYear, getFooterCopy } from '../utils/utils';
 
 function App() {
     return (
