@@ -3,8 +3,8 @@ const path = require('path');
 module.exports = {
     entry: './src/index.js',
     output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js'
+        filename: 'bundle.js',
+        path: path.resolve(__dirname, 'dist')
     },
     mode: 'development',
     devtool: 'inline-source-map',
@@ -26,7 +26,9 @@ module.exports = {
             {
                 test: /\.(png|jpe?g|gif|svg)$/i,
                 use: [
-                    'file-loader',
+                    {
+                        loader: 'file-loader',
+                    },
                     {
                         loader: 'image-webpack-loader',
                         options: {
@@ -37,4 +39,4 @@ module.exports = {
             },
         ],
     },
-}
+};
