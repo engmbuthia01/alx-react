@@ -14,8 +14,18 @@ module.exports = {
         open: 'true',
         port: 3000
     },
+    resolve: {
+        extensions: ['.js', '.jsx'],
+    },
     module: {
         rules: [
+            {
+                test: /\.(js|jsx)$/i,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                }
+            },
             {
                 test: /\.css$/i,
                 use: [
@@ -34,15 +44,6 @@ module.exports = {
                         options: {
                             bypassOnDebug: true,
                         },
-                    },
-                ],
-            },
-            {
-                test: /\.(js|jsx)$/i,
-                exclude: /node_modules/,
-                use: [
-                    {
-                        loader: 'babel-loader',
                     },
                 ],
             },
