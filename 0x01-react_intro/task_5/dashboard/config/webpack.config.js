@@ -5,7 +5,8 @@ module.exports = {
     entry: './src/index.js',
     output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist'),
+        clean: true, // clears old files from dist
     },
     mode: 'development',
     devtool: 'inline-source-map',
@@ -13,7 +14,8 @@ module.exports = {
         static: path.resolve(__dirname, 'dist'),
         hot: true,
         open: true,
-        port: 3000
+        port: 3000,
+        historyApiFallback: true, // good for React Router
     },
     resolve: {
         extensions: ['.js', '.jsx'],
@@ -26,32 +28,19 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(js|jsx)$/i,
+                test: /\.(js|jsx)$/,   // <--- JSX support
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
-                }
+                },
             },
             {
                 test: /\.css$/i,
-                use: [
-                    'style-loader',
-                    'css-loader'
-                ],
+                use: ['style-loader', 'css-loader'],
             },
             {
                 test: /\.(png|jpe?g|gif|svg)$/i,
-                use: [
-                    {
-                        loader: 'file-loader',
-                    },
-                    {
-                        loader: 'image-webpack-loader',
-                        options: {
-                            bypassOnDebug: true,
-                        },
-                    },
-                ],
+                type: 'asset/resource', // replaces file-loader in webpack 5
             },
         ],
     },
