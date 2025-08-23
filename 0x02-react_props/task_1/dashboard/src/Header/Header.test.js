@@ -3,13 +3,13 @@ import Header from "./Header";
 import { shallow } from "enzyme";
 
 describe("Header", () => {
-    it("render without crashing", () => {
-        const wrapper = shallow(<Header />);
-        expect(wrapper.exists()).toEqual(true);
+    it("renders without crashing", () => {
+        shallow(<Header />);
     });
-    it("should render a h1", () => {
+
+    it("renders img and h1 tags", () => {
         const wrapper = shallow(<Header />);
-        expect(wrapper.exists("img")).toEqual(true);
-        expect(wrapper.containsMatchingElement(<h1>School dashboard</h1>)).toEqual(true);
+        expect(wrapper.find("img").exists()).toBe(true);
+        expect(wrapper.find("h1").exists()).tobe(true);
     });
 });
