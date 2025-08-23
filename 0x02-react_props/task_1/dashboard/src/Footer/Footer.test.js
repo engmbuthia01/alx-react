@@ -1,6 +1,6 @@
 import React from "react";
 import Footer from "./Footer";
-import { shallow } from 'enzyme';
+import { shallow } from "enzyme";
 
 describe("Footer component", () => {
     it("renders the Footer component without crashing", () => {
