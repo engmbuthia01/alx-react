@@ -8,7 +8,12 @@ describe("CourseListRow component", () => {
         expect(wrapper.find("th").prop("colSpan")).toEqual("2");
     });
 
+    it("renders two cells when textSecondCell is present", () => {
+
+    });
+
     it("renders two th elements when isheader is false", () => {
-        const wrapper = shallow(<CourseListRow isHeader={false} />)
+        const wrapper = shallow(<CourseListRow isHeader={false} />);
+        expect(wrapper.find("td")).toHaveLength(2);
     });
 });

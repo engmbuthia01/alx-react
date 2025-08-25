@@ -9,6 +9,13 @@ function CourseListRow({ isHeader, textFirstCell, textSecondCell }) {
                     <th colSpan="2">{textFirstCell}</th>
                 </tr>
             );
+        } else {
+            return (
+                <tr>
+                    <th>{textFirstCell}</th>
+                    <th>{textFirstCell}</th>
+                </tr>
+            );
         }
     } else {
         return (
