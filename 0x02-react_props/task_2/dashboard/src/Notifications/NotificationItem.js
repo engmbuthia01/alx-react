@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "proptypes";
 
 function NotificationItem({ type, value, html }) {
     if (value) {

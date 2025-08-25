@@ -15,7 +15,7 @@ describe("Notification component tests", () => {
         expect(notification.find("ul")).toBeDefined();
     });
 
-    it("renders three list items", () => {
+    it("renders three NotificationItem elements", () => {
         const notification = shallow(<Notifications />);
 
         expect(notification.find("li")).toHaveLength(3);
