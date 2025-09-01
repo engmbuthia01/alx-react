@@ -6,6 +6,15 @@
     width: 95vw;
 }
 
+.notification-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menuItem {
+    text-align: right;
+}
+
 [data-notification-type="default"] {
     color: blue;
 }

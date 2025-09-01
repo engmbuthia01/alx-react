@@ -42,7 +42,7 @@ Notifications.propTypes = {
 
 Notifications.defaultProps = {
     displayDrawer: false,
-}
+};
 
 
 export default Notifications;

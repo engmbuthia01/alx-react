@@ -48,5 +48,4 @@ describe("App tests", () => {
             expect(wrapper.find(CourseList)).toHaveLength(1);
         });
     });
-
 });
