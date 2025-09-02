@@ -7,7 +7,7 @@ import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import CourseList from "../CourseList/CourseList";
 
-function App() {
+function App(isLoggedIn) {
     return (
         <React.Fragment>
             <Notifications />
@@ -20,7 +20,7 @@ function App() {
     );
 }
 
-App.PropTypes = {
+App.propTypes = {
     isLoggedIn: PropTypes.bool,
 };
 
