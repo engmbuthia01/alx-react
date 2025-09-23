@@ -4,6 +4,7 @@ import closeIcon from "../assets/close-icon.png";
 import { getLatestNotification } from "../utils/utils";
 import NotificationItem from "./NotificationItem";
 import PropTypes from "prop-types";
+import NotificationItemShape from "./NotificationItemShape";
 
 function Notifications({ displayDrawer, listNotifications }) {
     return (
@@ -53,9 +54,9 @@ function Notifications({ displayDrawer, listNotifications }) {
     );
 }
 
-Notifications.propTypes = {
+Notifications.PropTypes = {
     displayDrawer: PropTypes.bool,
-    listNotifications: PropTypes.arrayOf(NotificationItemShape),
+    listNotifications: PropTypes.arrayOf(NotificationItemShape)
 };
 
 Notifications.defaultProps = {
