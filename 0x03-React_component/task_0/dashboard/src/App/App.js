@@ -20,17 +20,18 @@ const listNotifications = [
     { id: 3, type: "urgent", html: getLatestNotification() },
 ];
 
-class App extends Component({ isLoggedIn }) {
+class App extends Component {
     render() {
+        const { isLoggedIn } = this.props;
         return (
             <React.Fragment>
-                <Notifications listNotifications={listNotifications} />
+                <Notifications listNotifications={this.listNotifications} />
                 <div className="App">
                     <Header />
-                    {isLoggedIn ? <CourseList listCourses={listCourses} /> : <Login />}
+                    {isLoggedIn ? <CourseList listCourses={this.listCourses} /> : <Login />}
                     <Footer />
                 </div>
-            </React.Fragment >
+            </React.Fragment>
         );
     }
 }
