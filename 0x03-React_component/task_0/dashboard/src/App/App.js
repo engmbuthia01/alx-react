@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 import "./App.css";
 import Notifications from "../Notifications/Notifications";
@@ -20,17 +20,19 @@ const listNotifications = [
     { id: 3, type: "urgent", html: getLatestNotification() },
 ];
 
-function App({ isLoggedIn }) {
-    return (
-        <React.Fragment>
-            <Notifications listNotifications={listNotifications} />
-            <div className="App">
-                <Header />
-                {isLoggedIn ? <CourseList listCourses={listCourses} /> : <Login />}
-                <Footer />
-            </div>
-        </React.Fragment>
-    );
+class App extends Component({ isLoggedIn }) {
+    render() {
+        return (
+            <React.Fragment>
+                <Notifications listNotifications={listNotifications} />
+                <div className="App">
+                    <Header />
+                    {isLoggedIn ? <CourseList listCourses={listCourses} /> : <Login />}
+                    <Footer />
+                </div>
+            </React.Fragment >
+        );
+    }
 }
 
 App.propTypes = {
