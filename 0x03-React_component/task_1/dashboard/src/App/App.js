@@ -21,6 +21,21 @@ const listNotifications = [
 ];
 
 class App extends Component {
+    componentDidMount() {
+        document.addEventListener("keydown", this.handleKeyDown);
+    }
+
+    componentWillUnmount() {
+        document.removeEventListener("keydown", this.handleKeyDown);
+    }
+
+    // ✅ Arrow function automatically binds "this"
+    handleKeyDown = (e) => {
+        if (e.ctrlKey && e.key === "h") {
+            alert("Logging you out");
+            this.props.logOut();
+        }
+    };
     render() {
         const { isLoggedIn } = this.props;
         return (
@@ -38,10 +53,12 @@ class App extends Component {
 
 App.propTypes = {
     isLoggedIn: PropTypes.bool,
+    logOut: PropTypes.func,
 };
 
 App.defaultProps = {
     isLoggedIn: false,
+    logOut: () => { },
 };
 
 
