@@ -1,11 +1,11 @@
-import React, { Component } from "react";
-import Notifications from "../Notifications/Notifications";
-import Header from "../Header/Header";
-import Login from "../Login/Login";
-import Footer from "../Footer/Footer";
-import CourseList from "../CourseList/CourseList";
+import React from "react";
 import PropTypes from "prop-types";
 import "./App.css";
+import Notifications from "../Notifications/Notifications";
+import Login from "../Login/Login";
+import Footer from "../Footer/Footer";
+import Header from "../Header/Header";
+import CourseList from "../CourseList/CourseList";
 import { getLatestNotification } from "../utils/utils";
 
 const listCourses = [
@@ -20,29 +20,26 @@ const listNotifications = [
     { id: 3, type: "urgent", html: getLatestNotification() },
 ];
 
-class App extends Component(isLoggedIn) {
-    render() {
-        return (
-            <React.Fragment>
-                <div className="App">
-                    <div className="heading-section">
-                        <Notifications listNotifications={listNotifications} />
-                        <Header />
-                    </div>
-                    {isLoggedIn ? <CourseList listCourses={listCourses} /> : <Login />}
-                    <Footer />
-                </div>
-            </React.Fragment >
-        );
-    }
+function App({ isLoggedIn }) {
+    return (
+        <React.Fragment>
+            <Notifications listNotifications={listNotifications} />
+            <div className="App">
+                <Header />
+                {isLoggedIn ? <CourseList listCourses={listCourses} /> : <Login />}
+                <Footer />
+            </div>
+        </React.Fragment>
+    );
 }
+
+App.propTypes = {
+    isLoggedIn: PropTypes.bool,
+};
 
 App.defaultProps = {
     isLoggedIn: false,
 };
 
-App.propTypes = {
-    isLoggedIn: PropTypes.bool,
-};
 
 export default App;

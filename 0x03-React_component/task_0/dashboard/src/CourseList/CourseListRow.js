@@ -27,7 +27,7 @@ function CourseListRow({ isHeader, textFirstCell, textSecondCell }) {
 CourseListRow.PropTypes = {
     isHeader: PropTypes.bool,
     textFirstCell: PropTypes.string.isRequired,
-    textSecondCell: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    textSecondCell: PropTypes.oneOfType(PropTypes.string, PropTypes.number),
 };
 
 
