@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import "./App.css";
+import { StyleSheet, css } from "aphrodite";
 import Notifications from "../Notifications/Notifications";
 import Login from "../Login/Login";
 import Footer from "../Footer/Footer";
@@ -43,7 +43,7 @@ class App extends Component {
         return (
             <React.Fragment>
                 <Notifications listNotifications={this.listNotifications} />
-                <div className="App">
+                <div className={css(styles.App)}>
                     <Header />
                     {isLoggedIn ? (
                         <BodySectionWithMarginBottom title="Course list">
@@ -67,6 +67,15 @@ class App extends Component {
         );
     }
 }
+
+const styles = StyleSheet.create({
+    App: {
+        height: "100vh",
+        maxWidth: "100vw",
+        position: "relative",
+        fontFamily: "Arial, Helvetica, sans-serif",
+    },
+});
 
 App.propTypes = {
     isLoggedIn: PropTypes.bool,
