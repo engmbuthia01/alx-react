@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 
 function CourseList({ listCourses }) {
     return (
-        <table id="CourseList">
+        <table id="CourseList" >
             <thead>
                 <CourseListRow textFirstCell="Available courses" isHeader={true} />
                 <CourseListRow textFirstCell="Course name" textSecondCell="Credit" isHeader={true} />
