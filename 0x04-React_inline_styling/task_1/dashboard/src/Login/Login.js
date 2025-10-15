@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
         fontSize: "1rem",
         padding: "2em",
         borderBottom: "3px solid #e0354b",
-        height: "75%",
+        height: "75vh",
     },
     input: {
         margin: "10px",
