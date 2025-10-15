@@ -1,5 +1,5 @@
 import React, { PureComponent } from "react";
-import "./Notifications.css";
+import { StyleSheet, css } from "aphrodite";
 import PropTypes from "prop-types";
 
 class NotificationItem extends PureComponent {
