@@ -7,13 +7,22 @@ class NotificationItem extends PureComponent {
         const { type, value, html, markAsRead } = this.props;
         return (
             <>
-                {type && value ? <li onClick={() => markAsRead(id)} data-notification-type={type}>{value}</li> : null}
-                {html ? <li onClick={() => markAsRead(id)} data-urgent dangerouslySetInnerHTML={{ __html: html }}></li> : null}
+                {type && value ? <li className={css(styles.default)} onClick={() => markAsRead(id)} data-notification-type={type}>{value}</li> : null}
+                {html ? <li className={css(styles.urgent)} onClick={() => markAsRead(id)} data-urgent dangerouslySetInnerHTML={{ __html: html }}></li> : null}
             </>
         );
     }
 
 }
+
+const styles = StyleSheet.create({
+    default: {
+        color: "blue",
+    },
+    urgent: {
+        color: "red",
+    },
+});
 
 NotificationItem.propTypes = {
     type: PropTypes.string.isRequired,
