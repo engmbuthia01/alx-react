@@ -66,6 +66,16 @@ const styles = StyleSheet.create({
         top: "10px",
         width: "95vw",
     },
+    "@media (max-width: 375px)": {
+        display: "block",
+        height: "100vh",
+        width: "100vw",
+        marginLeft: "auto",
+        marginRight: "auto",
+        border: "none",
+        fontSize: "20px",
+        padding: "0",
+    },
     "notification-header": {
         display: "flex",
         justifyContent: "space-between",
