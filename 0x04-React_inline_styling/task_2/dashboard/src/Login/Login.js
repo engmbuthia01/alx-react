@@ -7,11 +7,17 @@ function Login() {
             <div className={css(styles.AppBody)}>
                 <p>Login to access the full dashboard</p>
                 <form>
-                    <label htmlFor="email">Email:</label>
-                    <input type="email" id="email" name="email" className={css(styles.input)}></input>
-                    <label htmlFor="password">Password:</label>
-                    <input type="password" id="password" name="password" className={css(styles.input)}></input>
-                    <button>OK</button>
+                    <div>
+                        <label htmlFor="email">Email:</label>
+                        <input type="email" id="email" name="email" className={css(styles.input)}></input>
+                    </div>
+                    <div>
+                        <label htmlFor="password">Password:</label>
+                        <input type="password" id="password" name="password" className={css(styles.input)}></input>
+                    </div>
+                    <div>
+                        <button>OK</button>
+                    </div>
                 </form>
             </div >
         </React.Fragment>
